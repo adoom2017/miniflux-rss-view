@@ -1,0 +1,9 @@
+node_modules/
+dist/
+release/
+data.json
+.DS_Store
+npm-debug.log*
+.agents/
+.codex/
+.trellis/
