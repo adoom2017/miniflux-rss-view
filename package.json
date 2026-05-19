@@ -1,6 +1,6 @@
 {
   "name": "miniflux-rss-view",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Obsidian plugin for reading Miniflux RSS entries.",
   "main": "dist/main.js",
   "scripts": {
