@@ -1,0 +1,194 @@
+.miniflux-view {
+  --miniflux-border: var(--background-modifier-border);
+  --miniflux-card-bg: var(--background-primary);
+  --miniflux-gap: 12px;
+  --miniflux-muted: var(--text-muted);
+  padding: 16px;
+}
+
+.miniflux-toolbar {
+  align-items: flex-start;
+  border-bottom: 1px solid var(--miniflux-border);
+  display: flex;
+  gap: var(--miniflux-gap);
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+}
+
+.miniflux-title-group,
+.miniflux-toolbar-actions,
+.miniflux-filters,
+.miniflux-card-meta,
+.miniflux-card-actions {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.miniflux-title-group {
+  min-width: 0;
+}
+
+.miniflux-title-icon {
+  align-items: center;
+  color: var(--text-accent);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.miniflux-title-group h2 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.miniflux-controls {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.miniflux-search-row {
+  display: flex;
+  gap: 8px;
+}
+
+.miniflux-search-input {
+  flex: 1 1 auto;
+  min-width: 160px;
+}
+
+.miniflux-filters {
+  flex-wrap: wrap;
+}
+
+.miniflux-button,
+.miniflux-icon-button,
+.miniflux-load-more-button {
+  align-items: center;
+  display: inline-flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.miniflux-icon-button {
+  height: 32px;
+  padding: 0;
+  width: 32px;
+}
+
+.miniflux-filter-button.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.miniflux-status {
+  color: var(--miniflux-muted);
+  font-size: 0.86rem;
+  min-height: 22px;
+}
+
+.miniflux-status.is-error {
+  color: var(--text-error);
+}
+
+.miniflux-card-list {
+  display: grid;
+  gap: var(--miniflux-gap);
+}
+
+.miniflux-card {
+  background: var(--miniflux-card-bg);
+  border: 1px solid var(--miniflux-border);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.miniflux-card.is-read {
+  opacity: 0.78;
+}
+
+.miniflux-card-header {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--miniflux-gap);
+  justify-content: space-between;
+}
+
+.miniflux-card-main {
+  min-width: 0;
+}
+
+.miniflux-card-title {
+  background: transparent;
+  border: 0;
+  color: var(--text-normal);
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
+
+.miniflux-card-title:hover {
+  color: var(--text-accent);
+}
+
+.miniflux-card-meta {
+  color: var(--miniflux-muted);
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  margin-bottom: 10px;
+}
+
+.miniflux-pill {
+  background: var(--background-secondary);
+  border: 1px solid var(--miniflux-border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  padding: 3px 8px;
+}
+
+.miniflux-pill-unread {
+  color: var(--text-accent);
+}
+
+.miniflux-summary {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.miniflux-load-more {
+  display: flex;
+  justify-content: center;
+  min-height: 44px;
+  padding-top: 12px;
+}
+
+@media (max-width: 600px) {
+  .miniflux-toolbar,
+  .miniflux-card-header,
+  .miniflux-search-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .miniflux-toolbar-actions,
+  .miniflux-card-actions {
+    justify-content: flex-start;
+  }
+}
