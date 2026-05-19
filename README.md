@@ -21,6 +21,31 @@ Desktop Obsidian plugin for reading Miniflux RSS entries inside Obsidian.
 6. Enable Obsidian's core `Web viewer` plugin.
 7. Open plugin settings and enter your Miniflux server URL and API key.
 
+## Release
+
+Use the release scripts to update plugin versions before tagging. The scripts keep `package.json`, `manifest.json`, and `versions.json` in sync, rebuild `dist/`, commit the release files, and create a tag without a `v` prefix.
+
+```bash
+npm run release -- 0.1.1
+```
+
+For automatic semantic version bumps:
+
+```bash
+npm run release:patch
+npm run release:minor
+npm run release:major
+```
+
+Push the commit and tag after the release script finishes:
+
+```bash
+git push origin main
+git push origin 0.1.1
+```
+
+Then create a GitHub Release for the tag and upload `dist/main.js`, `dist/manifest.json`, and `dist/styles.css`.
+
 ## Disclosures
 
 This plugin requires access to a Miniflux instance. You need to provide a Miniflux server URL and API key in the plugin settings.
