@@ -23,7 +23,7 @@ Desktop Obsidian plugin for reading Miniflux RSS entries inside Obsidian.
 
 ## Release
 
-Use the release scripts to update plugin versions before tagging. The scripts keep `package.json`, `manifest.json`, and `versions.json` in sync, rebuild `dist/`, commit the release files, and create a tag without a `v` prefix.
+Use the release scripts to update plugin versions before tagging. The scripts keep `package.json`, `manifest.json`, and `versions.json` in sync, rebuild `dist/`, commit the tracked release files, and create a tag without a `v` prefix. The generated `dist/` files are ignored by Git and should be uploaded as GitHub Release assets.
 
 ```bash
 npm run release -- 0.1.1

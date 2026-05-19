@@ -1,12 +1,12 @@
 {
   "name": "miniflux-rss-view",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Obsidian plugin for reading Miniflux RSS entries.",
   "main": "dist/main.js",
   "scripts": {
     "dev": "node scripts/copy-assets.mjs && node esbuild.config.mjs",
     "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production && node scripts/copy-assets.mjs",
-    "version": "node scripts/sync-version.mjs && npm run build && git add package.json package-lock.json manifest.json versions.json dist/main.js dist/manifest.json dist/styles.css dist/README.md dist/versions.json",
+    "version": "node scripts/sync-version.mjs && npm run build && git add package.json package-lock.json manifest.json versions.json",
     "release": "npm version --tag-version-prefix=\"\"",
     "release:patch": "npm version patch --tag-version-prefix=\"\"",
     "release:minor": "npm version minor --tag-version-prefix=\"\"",
