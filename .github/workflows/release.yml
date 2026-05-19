@@ -6,7 +6,9 @@ on:
       - "*.*.*"
 
 permissions:
+  attestations: write
   contents: write
+  id-token: write
 
 jobs:
   release:
@@ -44,9 +46,14 @@ jobs:
           test -f dist/main.js
           test -f dist/manifest.json
           test -f dist/styles.css
-          test -f dist/versions.json
-          test -f dist/README.md
-          test -f dist/LICENSE
+
+      - name: Generate artifact attestations
+        uses: actions/attest@v4
+        with:
+          subject-path: |
+            dist/main.js
+            dist/manifest.json
+            dist/styles.css
 
       - name: Generate release notes
         run: |
@@ -89,9 +96,6 @@ jobs:
             echo "- main.js"
             echo "- manifest.json"
             echo "- styles.css"
-            echo "- versions.json"
-            echo "- README.md"
-            echo "- LICENSE"
           } > release-notes.md
 
       - name: Publish GitHub Release
@@ -102,9 +106,6 @@ jobs:
             dist/main.js \
             dist/manifest.json \
             dist/styles.css \
-            dist/versions.json \
-            dist/README.md \
-            dist/LICENSE \
             --title "$GITHUB_REF_NAME" \
             --notes-file release-notes.md \
             --verify-tag

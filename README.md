@@ -44,15 +44,12 @@ git push origin main
 git push origin 0.1.1
 ```
 
-Pushing the tag starts the release workflow. GitHub Actions builds the plugin, creates a GitHub Release, writes release notes with the release commands and commit summary, and uploads the plugin files from `dist/`:
+Pushing the tag starts the release workflow. GitHub Actions builds the plugin, creates artifact attestations, writes release notes with the release commands and commit summary, and uploads the supported plugin files from `dist/`:
 
 ```text
 dist/main.js
 dist/manifest.json
 dist/styles.css
-dist/versions.json
-dist/README.md
-dist/LICENSE
 ```
 
 ## Disclosures
