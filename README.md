@@ -44,7 +44,16 @@ git push origin main
 git push origin 0.1.1
 ```
 
-Then create a GitHub Release for the tag and upload `dist/main.js`, `dist/manifest.json`, and `dist/styles.css`.
+Then create a GitHub Release for the tag and upload the plugin files from `dist/`:
+
+```text
+dist/main.js
+dist/manifest.json
+dist/styles.css
+dist/versions.json
+dist/README.md
+dist/LICENSE
+```
 
 ## Disclosures
 

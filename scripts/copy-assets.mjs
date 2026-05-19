@@ -6,6 +6,7 @@ const assets = [
   "manifest.json",
   "styles.css",
   "README.md",
+  "LICENSE",
   "versions.json",
 ];
 
