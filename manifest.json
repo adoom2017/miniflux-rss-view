@@ -1,10 +1,10 @@
 {
-  "id": "miniflux-rss-view",
-  "name": "Miniflux RSS View",
-  "version": "0.1.0",
-  "minAppVersion": "1.8.3",
-  "description": "Read Miniflux RSS entries and open articles in Obsidian Web viewer.",
-  "author": "shendongchun",
-  "authorUrl": "",
-  "isDesktopOnly": true
+    "id": "miniflux-rss-view",
+    "name": "Miniflux RSS View",
+    "version": "1.0.0",
+    "minAppVersion": "1.8.3",
+    "description": "Read Miniflux RSS entries and open articles in Obsidian Web viewer.",
+    "author": "shendongchun",
+    "authorUrl": "",
+    "isDesktopOnly": true
 }
